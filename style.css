@@ -26,7 +26,7 @@ body{
 
 header{
     margin-top: 20px;/* Marge supérieure de 20px */
-    position: fixed;/* Position fixe pour que le header reste en haut de la page */
+    position: absolute;/* Position fixe pour que le header reste en haut de la page */
     top: 0;
     left: 0;
     width: 100%;/* Largeur de 100% pour occuper toute la largeur de la page */
@@ -47,10 +47,6 @@ header{
     transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
 }
 
-.logo:hover{
-    transform: scale(1.1);/* Agrandit légèrement le logo lorsqu'on passe la souris dessus */
-}
-
 nav a{
     font-size: 1.8rem;/* Taille de police de 1.8rem */
     color: white;/* Couleur du texte blanche */
@@ -60,6 +56,17 @@ nav a{
     border-bottom: 3px solid transparent;/* Bordure inférieure transparente de 3px */
 }
 
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+.burger-menu {
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+}
 
 section{
     min-height: 100vh;/* Hauteur minimale de 100% de la hauteur de la fenêtre */
@@ -130,6 +137,8 @@ span{
 .social-icons a:hover{
     color: black;/* Change la couleur du texte en noir lorsqu'on passe la souris dessus */
     background-color: #b74b4b;/* Change la couleur de fond en #b74b4b lorsqu'on passe la souris dessus */
+    box-shadow: 0  0 25px #b74b4b;
+    transform: scale(1.3) translateY(-5px);
 }
 
 .btn{
@@ -164,7 +173,6 @@ span{
     color: #b74b4b;/* Couleur du texte */
 }
 
-/* Conteneur de la box */
 .site {
     background-color: #0a0a0a; /* Fond blanc */
     border: 1px solid #ddd; /* Bordure fine */
@@ -212,7 +220,6 @@ span{
   .site-button:hover {
     background-color: #0056b3; /* Couleur au survol */
   }
-
 .appgestion {
     background-color: black;
     border: white solid 1px;
@@ -229,7 +236,7 @@ span{
 }
 
   /* Titre */
-.appgestion-title {
+  .appgestion-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
@@ -258,8 +265,6 @@ span{
   .appgestion-button:hover {
     background-color: #0056b3; /* Couleur au survol */
   }
-
-
   .reseausocial {
     background-color: black;
     border: white solid 1px;
@@ -276,7 +281,7 @@ span{
 }
 
   /* Titre */
-.reseausocial-title {
+  .reseausocial-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
@@ -305,7 +310,6 @@ span{
   .reseausocial-button:hover {
     background-color: #0056b3; /* Couleur au survol */
   }
-
   .dashboard {
     background-color: black;
     border: white solid 1px;
@@ -322,7 +326,7 @@ span{
 }
 
   /* Titre */
-.dashboard-title {
+  .dashboard-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
@@ -351,7 +355,6 @@ span{
   .dashboard-button:hover {
     background-color: #0056b3; /* Couleur au survol */
   }
-
   .jeu {
     background-color: black;
     border: white solid 1px;
@@ -368,7 +371,7 @@ span{
 }
 
   /* Titre */
-.jeu-title {
+  .jeu-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
@@ -397,3 +400,60 @@ span{
   .jeu-button:hover {
     background-color: #0056b3; /* Couleur au survol */
   }
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 768px){
+    .home-content nav{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 60px; /* Adjust according to your header height */
+        right: 0;
+        background-color: black; /* Adjust according to your design */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.active a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
+    }
+}
