@@ -1,0 +1,134 @@
+
+*{
+    margin: 0;/* Réinitialise la marge à 0 pour tous les éléments */
+    padding: 0;/* Réinitialise le padding à 0 pour tous les éléments */
+    box-sizing: border-box;/* Définit le modèle de boîte à border-box pour inclure les bordures et le padding dans les dimensions totales */
+    text-decoration: none;/* Supprime la décoration de texte pour tous les liens */
+    border: none;/* Supprime les bordures pour tous les éléments */
+    outline: none;/* Supprime les contours pour tous les éléments */
+    font-family: 'Poppins', sans-serif;/* Définit la police par défaut à 'Poppins' pour tous les éléments */
+}
+
+html{
+    font-size: 62.5%;/* Définit la taille de police de base à 62.5% de la taille par défaut du navigateur (généralement 16px), 
+    ce qui équivaut à 10px. Cela facilite l'utilisation des rems pour les tailles de police et les espacements. */
+}
+
+body{
+    width: 100%;/* Largeur de 100% */
+    height: 100vh;/* Hauteur de 100% de la hauteur de la fenêtre */
+    overflow-x: hidden;/* Désactive le défilement horizontal */
+    background-color: black;/* Couleur de fond noire */
+    color: white;/* Couleur du texte blanche */
+}
+
+header{
+    margin-top: 20px;/* Marge supérieure de 20px */
+    position: absolute;/* Position fixe pour que le header reste en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;/* Largeur de 100% pour occuper toute la largeur de la page */
+    padding: 1rem 9%;/* Padding interne de 1rem sur les côtés et 9% sur les bords */
+    background-color: transparent;/* Couleur de fond transparente */
+    filter: drop-shadow(10px);/* Applique une ombre portée */
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;/* Assure que le header reste au-dessus des autres éléments */
+}
+
+.logo{
+    font-size: 3rem;/* Taille de police de 3rem */
+    color: #b74b4b; /* Couleur du texte */
+    font-weight: 800;/* Poids de la police très gras */
+    cursor: pointer;/* Change le curseur en pointeur (main) */
+    transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
+}
+
+nav a{
+    font-size: 1.8rem;/* Taille de police de 1.8rem */
+    color: white;/* Couleur du texte blanche */
+    margin-left: 4rem;/* Marge à gauche de 4rem */
+    font-weight: 500;/* Poids de la police moyen */
+    transition: 0.3s ease;/* Transition douce de 0.3s pour les changements de style */
+    border-bottom: 3px solid transparent;/* Bordure inférieure transparente de 3px */
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+section{
+    min-height: 100vh;/* Hauteur minimale de 100% de la hauteur de la fenêtre */
+    padding: 5rem 9% 5rem;/* Padding de 5rem en haut et en bas, et 9% sur les côtés */
+}
+
+
+
+h1{
+    font-size: 3rem;/* Taille de police de 6rem */
+    font-weight: 700;/* Poids de la police très gras */
+    line-height: 1.3;/* Hauteur de ligne de 1.3 */
+    text-align: center;
+    color: #b74b4b;
+    border-bottom: 2px solid #b74b4b;
+    margin-inline: 66px;
+}
+
+span{
+    color: #b74b4b;/* Couleur du texte */
+}
+
+.Contact-content h3{
+    font-size: 2rem;/* Taille de police de 4rem */
+    margin-bottom: 1rem;/* Marge inférieure de 1rem */
+    font-weight: 700;/* Poids de la police très gras */
+}
+
+.Contact-content p{
+    font-size: 1.6rem;/* Taille de police de 1.6rem */
+    margin:1.5em;
+}
+
+.social-icons a{
+    display: inline-flex;/* Utilise Flexbox pour aligner les éléments horizontalement et verticalement */
+    justify-content: center;
+    align-items: center;
+    width: 4rem;/* Dimensions de l'icône */
+    height: 4rem;
+    background-color: transparent;/* Couleur de fond transparente */
+    border: 0.1rem solid #b74b4b;/* Bordure de 0.2rem avec une couleur spécifique */
+    font-size: 2rem;/* Taille de police de 2rem */
+    border-radius: 50%;/* Bordure arrondie à 50% pour créer un effet de cercle */
+    margin: 3rem 1.5rem 3rem 0;/* Marge autour de l'icône */
+    transition: 0.3s ease;/* Transition douce de 0.3s pour les changements de style */
+    color: #b74b4b;/* Couleur du texte */
+}
+
+.social-icons a:hover{
+    color: black;/* Change la couleur du texte en noir lorsqu'on passe la souris dessus */
+    background-color: #b74b4b;/* Change la couleur de fond en #b74b4b lorsqu'on passe la souris dessus */
+    box-shadow: 0  0 25px #b74b4b;
+    transform: scale(1.3) translateY(-5px);
+}
+
+
+
+.comment-notes{
+    font-size: 34px;/* Taille de police de 34px */
+    font-weight: 600;/* Poids de la police gras */
+    min-width: 280px;/* Largeur minimale de 280px */
+}
+
+.typing-text span{
+    position: relative;/* Position relative pour permettre un positionnement par rapport à son conteneur */
+    color: #b74b4b;/* Couleur du texte */
+    border-radius: 5%;
+}
+
+textarea{
+    margin: 5px solid #b74b4b;
+    border-radius: 1%;
+}

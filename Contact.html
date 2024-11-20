@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="Contact-content">
+
+    <header>
+        <a href="#" class="logo">Sergueï</a>
+
+        <nav>
+            <a href="#" > Home</a>
+            <a href="#" >Projects</a>
+            <a href="#" >Skills</a>
+            <a href="#" >Education</a>
+            <a href="#" >Experience</a>
+            <a href="#" class="active">Contact</a>
+        </nav>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+<body>
+    <h1>Me contacter</h1><br><br><br><br><br><br>
+
+    <h3>Laisser un message.</h3>
+<form id="message">
+    <p class="comment-notes">Votre adresse de messagerie ne sera pas publiée. Les champs obligatoires sont indiqués avec <span class="required">*</span></p>
+    <p><label for="mess"></label><textarea id="mess" cols="45" rows="8" required></textarea></p>
+    <p><label for="nom">Votre nom </label><span class="required">*</span><input type="text" id="nom" size="30" required></p>
+    <p class="email"><label for="email">Votre email <span class="required">*</span></label><input type="text" id="email" size="30" required></p>
+    
+    <button type="submit" id="submit" class="submit"> Envoyer </button>
+</form>
+<p class="message" id="succès" style="display:none;"></p>
+<script>
+    document.getElementById("message").addEventListener("submit",function(event){
+        event.preventDefault();
+        document.getElementById("mess").value="";
+        document.getElementById("nom").value="";
+        document.getElementById("email").value="";
+        const succès = document.getElementById("succès");
+        succès.innerText="Message bien envoyé !";
+        succès.style.display="block";
+    });
+</script>
+
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+
