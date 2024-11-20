@@ -26,7 +26,7 @@ body{
 
 header{
     margin-top: 20px;/* Marge supérieure de 20px */
-    position: fixed;/* Position fixe pour que le header reste en haut de la page */
+    position: absolute;/* Position fixe pour que le header reste en haut de la page */
     top: 0;
     left: 0;
     width: 100%;/* Largeur de 100% pour occuper toute la largeur de la page */
@@ -45,10 +45,6 @@ header{
     font-weight: 800;/* Poids de la police très gras */
     cursor: pointer;/* Change le curseur en pointeur (main) */
     transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
-}
-
-.logo:hover{
-    transform: scale(1.1);/* Agrandit légèrement le logo lorsqu'on passe la souris dessus */
 }
 
 nav a{
