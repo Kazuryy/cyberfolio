@@ -60,6 +60,11 @@ nav a{
     border-bottom: 3px solid transparent;/* Bordure inférieure transparente de 3px */
 }
 
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
 
 section{
     min-height: 100vh;/* Hauteur minimale de 100% de la hauteur de la fenêtre */
