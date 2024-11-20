@@ -192,3 +192,9 @@ span{
         margin-top: 4rem;
     }
 }
+
+@media(max-width: 768px){
+    .home-content nav{
+        font-size: 1rem;
+    }
+}
