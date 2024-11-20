@@ -185,29 +185,29 @@ span{
   }
   
   /* Animation au survol */
-  .site:hover {
+.site:hover {
     transform: translateY(-5px); /* Légère élévation */
     box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
-  }
-  
+}
+
   /* Titre */
-  .site-title {
+.site-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .site-content {
+.site-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .site-button {
+.site-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -215,11 +215,12 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .site-button:hover {
+.site-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
+}
+
 .appgestion {
     background-color: black;
     border: white solid 1px;
@@ -235,24 +236,24 @@ span{
     box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
 }
 
-  /* Titre */
-  .appgestion-title {
+/* Titre */
+.appgestion-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .appgestion-content {
+.appgestion-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
-  /* Bouton */
-  .appgestion-button {
+/* Bouton */
+.appgestion-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -262,10 +263,11 @@ span{
     transition: background-color 0.3s ease;
   }
   
-  .appgestion-button:hover {
+.appgestion-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
-  .reseausocial {
+}
+
+.reseausocial {
     background-color: black;
     border: white solid 1px;
     border-radius: 8px;
@@ -281,23 +283,23 @@ span{
 }
 
   /* Titre */
-  .reseausocial-title {
+.reseausocial-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .reseausocial-content {
+.reseausocial-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .reseausocial-button {
+.reseausocial-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -305,12 +307,13 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .reseausocial-button:hover {
+.reseausocial-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
-  .dashboard {
+}
+
+.dashboard {
     background-color: black;
     border: white solid 1px;
     border-radius: 8px;
@@ -326,23 +329,23 @@ span{
 }
 
   /* Titre */
-  .dashboard-title {
+.dashboard-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .dashboard-content {
+.dashboard-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .dashboard-button {
+.dashboard-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -350,12 +353,13 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .dashboard-button:hover {
+.dashboard-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
-  .jeu {
+}
+
+.jeu {
     background-color: black;
     border: white solid 1px;
     border-radius: 8px;
@@ -371,23 +375,23 @@ span{
 }
 
   /* Titre */
-  .jeu-title {
+.jeu-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .jeu-content {
+.jeu-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .jeu-button {
+.jeu-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -395,11 +399,12 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .jeu-button:hover {
+.jeu-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
+}
+
 @media (max-width: 1000px){
     .home{
         gap: 4rem;
