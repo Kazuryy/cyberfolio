@@ -2,41 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 *{
-    margin: 0;/* Réinitialise la marge à 0 pour tous les éléments */
-    padding: 0;/* Réinitialise le padding à 0 pour tous les éléments */
-    box-sizing: border-box;/* Définit le modèle de boîte à border-box pour inclure les bordures et le padding dans les dimensions totales */
-    text-decoration: none;/* Supprime la décoration de texte pour tous les liens */
-    border: none;/* Supprime les bordures pour tous les éléments */
-    outline: none;/* Supprime les contours pour tous les éléments */
-    font-family: 'Poppins', sans-serif;/* Définit la police par défaut à 'Poppins' pour tous les éléments */
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 html{
-    font-size: 62.5%;/* Définit la taille de police de base à 62.5% de la taille par défaut du navigateur (généralement 16px), 
-    ce qui équivaut à 10px. Cela facilite l'utilisation des rems pour les tailles de police et les espacements. */
+    font-size: 62.5%;
 }
 
 body{
-    width: 100%;/* Largeur de 100% */
-    height: 100vh;/* Hauteur de 100% de la hauteur de la fenêtre */
-    overflow-x: hidden;/* Désactive le défilement horizontal */
-    background-color: black;/* Couleur de fond noire */
-    color: white;/* Couleur du texte blanche */
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
 }
 
 header{
-    margin-top: 20px;/* Marge supérieure de 20px */
-    position: fixed;/* Position fixe pour que le header reste en haut de la page */
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;/* Largeur de 100% pour occuper toute la largeur de la page */
-    padding: 1rem 9%;/* Padding interne de 1rem sur les côtés et 9% sur les bords */
-    background-color: transparent;/* Couleur de fond transparente */
-    filter: drop-shadow(10px);/* Applique une ombre portée */
-    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;/* Assure que le header reste au-dessus des autres éléments */
+    z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
 .logo{
@@ -60,6 +55,55 @@ nav a{
     border-bottom: 3px solid transparent;/* Bordure inférieure transparente de 3px */
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo{
+    font-size: 3rem;/* Taille de police de 3rem */
+    color: #b74b4b; /* Couleur du texte */
+    font-weight: 800;/* Poids de la police très gras */
+    cursor: default;/* Change le curseur en pointeur (main) */
+    transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
+}
+.logo:hover{
+    transform: scale(1.1);/* Agrandit légèrement le logo lorsqu'on passe la souris dessus */
+}
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.liens-gauche {
+    display: flex;
+    gap:20px;
+}
+
+.liens-droite {
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    color:#b74b4b;
+    font-size: 3rem;
+    font-weight: 800;
+    cursor: default;
+    transition: 0.5s ease;
+}
 
 section{
     min-height: 100vh;/* Hauteur minimale de 100% de la hauteur de la fenêtre */
