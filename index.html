@@ -22,6 +22,28 @@
             <a href="#" >Experience</a>
             <a href="#" >Contact</a>
         </nav>
+
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+            
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const burgerMenu = document.querySelector('.burger-menu');
+                const nav = document.querySelector('nav');
+        
+                burgerMenu.addEventListener('click', function(event) {
+                    nav.classList.toggle('active');
+                    event.stopPropagation(); // Empêche le clic de se propager au document
+                });
+        
+                document.addEventListener('click', function(event) {
+                    if (!nav.contains(event.target) && !burgerMenu.contains(event.target)) {
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        </script>
     </header>
 
     <section class="home">
