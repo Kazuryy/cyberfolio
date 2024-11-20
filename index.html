@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Sergueï Cyberfolio</title>
 </head>
+
+
 <body>
     <header>
         <a href="#" class="logo">Sergueï</a>
+
         <nav>
             <a href="#" class="active"> Home</a>
             <a href="#" >Projects</a>
@@ -19,62 +22,85 @@
             <a href="#" >Experience</a>
             <a href="#" >Contact</a>
         </nav>
+
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+            
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const burgerMenu = document.querySelector('.burger-menu');
+                const nav = document.querySelector('nav');
+        
+                burgerMenu.addEventListener('click', function(event) {
+                    nav.classList.toggle('active');
+                    event.stopPropagation(); // Empêche le clic de se propager au document
+                });
+        
+                document.addEventListener('click', function(event) {
+                    if (!nav.contains(event.target) && !burgerMenu.contains(event.target)) {
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        </script>
     </header>
+
     <section class="home">
         <div class="home-img">
             <img src="main.png" alt="">
         </div>
         <div class="home-content">
-            <h1>Привет, это <span>Sergueï</span></h1>
-            <h3 class="typing-text">Я <span>SVR Developer</span></h3>
-            <p>Développer Full Stack avec 5 ans d'experience dans l'entreprise Analphabet, leader dans la tech et les nouvelles technologies de cloud et cybersécurité. Je développe des outils et des sites pour aider certaines personnes à mieux comprendre le Web</p>
+            <h1>Salut, c'est <span>Sergueï</span></h1>
+            <h3 class="typing-text">Je suis <span>Développeur Full Stack</span></h3>
+            <p>Développeur Full Stack avec 5 ans d'experience dans l'entreprise Analphabet, leader dans la tech et les nouvelles technologies de cloud et cybersécurité. Je développe des outils et des sites pour aider certaines personnes à mieux comprendre le Web</p>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn">Hire me</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn">Embauchez moi</a>
         </div>
     </section>
-        <div>
-            <section class="projets">
-                <h1 class="titre_projets">Mes projets réalisés :</h1>
-                <h1 class="site0">Site e-commerce</h1>
-                <!-- <p>Une plateforme de commerce électronique avec des fonctionnalités comme l'inscription des utilisateurs, un panier d'achat, un système de paiement sécurisé, et une gestion des produits.</p>
-                <p> Techonologies utilisées : 
-                    Front-end : React, Vue.js, ou Angular.
-                    Back-end : Node.js avec Express, Django, ou Ruby on Rails.
-                    Base de données : MongoDB, PostgreSQL, ou MySQL.
-                    Extras : Stripe/PayPal API pour les paiements. -->
-                </p>
-                <h2 class="appgestion0">Applications de gestion de tâches</h2>
-                <!-- <p>Une application de type "to-do list" qui permet aux utilisateurs de créer, modifier, supprimer et organiser leurs tâches.</p>
-                <p> Techonologies utilisées : 
-                    Front-end : React, Vue.js, ou Svelte pour l'interface utilisateur.
-                    Back-end : Node.js avec Express, Flask, ou Django pour la gestion des données.
-                    Base de données : MongoDB, Firebase Firestore, ou PostgreSQL.</p> -->
-                <h2 class="reseausocial0">Réseau social minimaliste</h2>
-                <!-- <p>Une plateforme où les utilisateurs peuvent s'inscrire, publier des messages, suivre d'autres utilisateurs, et interagir via des commentaires et des likes.</p>
-                <p> Techonologies utilisées :
-                    Front-end : Next.js ou Nuxt.js pour les performances.
-                    Back-end : GraphQL avec Apollo Server ou REST API.
-                    Extras : WebSockets pour le chat en temps réel.</p> -->
-                <h2 class="dashboard0">Dashboard interactif</h2>
-                <!-- <p>Un tableau de bord avec des visualisations de données (graphiques, tables interactives) pour un cas d'usage particulier (finances, logistique, marketing).</p>
-                <p> Techonologies utilisées :
-                    Front-end : D3.js, Chart.js, ou Recharts.
-                    Back-end : Flask ou Express.js.
-                    Extras : Intégration avec des APIs tierces pour des données en direct (API météo, finance, etc.). -->
-                </p>
-                <h2 class="jeu0">Jeu web multijoueur simple</h2>
-                <!-- <p>Un petit jeu interactif en ligne, comme un jeu de cartes ou un quiz.</p>
-                <p> Techonologies utilisées :
-                    Front-end : React ou Vue.js.
-                    Back-end : Node.js avec WebSockets. -->
-                </p>
-            </section>
-        </div>
+    <div>
+        <section class="projets">
+            <h1 class="titre_projets">Mes projets réalisés :</h1>
+            <h1 class="site0">Site e-commerce</h1>
+            <!-- <p>Une plateforme de commerce électronique avec des fonctionnalités comme l'inscription des utilisateurs, un panier d'achat, un système de paiement sécurisé, et une gestion des produits.</p>
+            <p> Techonologies utilisées : 
+                Front-end : React, Vue.js, ou Angular.
+                Back-end : Node.js avec Express, Django, ou Ruby on Rails.
+                Base de données : MongoDB, PostgreSQL, ou MySQL.
+                Extras : Stripe/PayPal API pour les paiements. -->
+            </p>
+            <h2 class="appgestion0">Applications de gestion de tâches</h2>
+            <!-- <p>Une application de type "to-do list" qui permet aux utilisateurs de créer, modifier, supprimer et organiser leurs tâches.</p>
+            <p> Techonologies utilisées : 
+                Front-end : React, Vue.js, ou Svelte pour l'interface utilisateur.
+                Back-end : Node.js avec Express, Flask, ou Django pour la gestion des données.
+                Base de données : MongoDB, Firebase Firestore, ou PostgreSQL.</p> -->
+            <h2 class="reseausocial0">Réseau social minimaliste</h2>
+            <!-- <p>Une plateforme où les utilisateurs peuvent s'inscrire, publier des messages, suivre d'autres utilisateurs, et interagir via des commentaires et des likes.</p>
+            <p> Techonologies utilisées :
+                Front-end : Next.js ou Nuxt.js pour les performances.
+                Back-end : GraphQL avec Apollo Server ou REST API.
+                Extras : WebSockets pour le chat en temps réel.</p> -->
+            <h2 class="dashboard0">Dashboard interactif</h2>
+            <!-- <p>Un tableau de bord avec des visualisations de données (graphiques, tables interactives) pour un cas d'usage particulier (finances, logistique, marketing).</p>
+            <p> Techonologies utilisées :
+                Front-end : D3.js, Chart.js, ou Recharts.
+                Back-end : Flask ou Express.js.
+                Extras : Intégration avec des APIs tierces pour des données en direct (API météo, finance, etc.). -->
+            </p>
+            <h2 class="jeu0">Jeu web multijoueur simple</h2>
+            <!-- <p>Un petit jeu interactif en ligne, comme un jeu de cartes ou un quiz.</p>
+            <p> Techonologies utilisées :
+                Front-end : React ou Vue.js.
+                Back-end : Node.js avec WebSockets. -->
+            </p>
+        </section>
+    </div>
 </body>
 </html>
 <!--Credit : https://www.youtube.com/@procoder09 -->
