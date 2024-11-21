@@ -216,7 +216,7 @@ h2 {
 
 .cv-photo:hover {
     transform: scale(1.1);
-    cursor: pointer;
+    cursor: default;
 }
 
 .cv-text {
