@@ -21,17 +21,15 @@ h1{
     border-bottom: 2px solid #b74b4b;
 }
 
-header {
+header{
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem 4%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -40,20 +38,45 @@ header {
     color: #b74b4b;
 }
 
-nav a {
-    font-size: 1.8rem;
-    color: white;
-    margin-left: 2rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+nav {
+    display: fixed;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-nav a:hover, .active {
-    color: #b74b4b;
-    border-bottom: 2px solid #b74b4b;
+nav a{
+    font-size: 1.8rem;/* Taille de police de 1.8rem */
+    color: white;/* Couleur du texte blanche */
+    margin-left: 4rem;/* Marge à gauche de 4rem */
+    font-weight: 500;/* Poids de la police moyen */
+    transition: 0.3s ease;/* Transition douce de 0.3s pour les changements de style */
+    border-bottom: 3px solid transparent;/* Bordure inférieure transparente de 3px */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.burger-menu {
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+.liens-gauche {
+    display: flex;
+    gap:20px;
+}
+
+.liens-droite {
+    display: flex;
+    gap: 20px;
 }
 
 main {
@@ -194,4 +217,72 @@ footer {
 .social-icons a:hover {
     transform: scale(1.2);
     color: #b74b4b;
+}
+
+@media (max-width: 400px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 768px){
+    .home-content nav{
+        font-size: 1rem;
+    }
+}
+
+/* Hide the burger menu button by default */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* Adjust the layout on mobile devices */
+@media (max-width: 768px) {
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .logo-container {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0; /* Remove any default margin */
+    }
+
+    .liens-gauche, .liens-droite {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    .mobile-menu.active {
+        display: block;
+    }
 }
