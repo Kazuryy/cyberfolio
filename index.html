@@ -15,35 +15,41 @@
             <div class="nav-content">
                 <div class="liens-gauche">
                     <a href="index.html"> Home</a>
-                    <a href="projects.html"> Projects</a>
+                    <a href="#"> Projects</a>
                 </div>
                 <div class="logo">
                     <a class="logo">Sergueï</a>
                 </div>
                 <div class="liens-droite">
-                    <a href="#about-me-section">About Me</a>
+                    <a href="#about-me-section"> About Me </a>
                     <a href="contact"> Contact</a>
                 </div>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="index.html"> Home</a>
+                <a href="#"> Projects</a>
+                <a href="#about-me-section"> About Me </a>
+                <a href="contact"> Contact</a>
             </div>
         </nav>
         
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const burgerMenu = document.querySelector('.burger-menu');
-                const nav = document.querySelector('nav');
+                const mobileMenu = document.querySelector('.mobile-menu');
         
                 burgerMenu.addEventListener('click', function(event) {
-                    nav.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
                     event.stopPropagation(); // Empêche le clic de se propager au document
                 });
         
                 document.addEventListener('click', function(event) {
-                    if (!nav.contains(event.target) && !burgerMenu.contains(event.target)) {
-                        nav.classList.remove('active');
+                    if (!mobileMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+                        mobileMenu.classList.remove('active');
                     }
                 });
             });
@@ -51,7 +57,7 @@
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="main.png" alt="">
+            <img src="Images/main.png" alt="">
         </div>
         <div class="home-content">
             <h1>Salut, c'est <span>Sergueï</span></h1>
