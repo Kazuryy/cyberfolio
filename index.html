@@ -100,9 +100,38 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const cvImage = document.getElementById('cvImage');
+                    const cvImageDoublon = document.getElementById('cvImageDoublon');
+                    const overlay = document.getElementById('overlay');
+                    let isEnlarged = false;
+        
+                    cvImage.addEventListener('click', function (event) {
+                        if (!isEnlarged) {
+                            cvImageDoublon.classList.add('active');
+                            overlay.classList.add('active');
+                            isEnlarged = true;
+                        }
+                        event.stopPropagation();
+                    });
+        
+                    document.addEventListener('click', function (event) {
+                        if (!cvImageDoublon.contains(event.target) && !cvImage.contains(event.target)) {
+                            if (isEnlarged) {
+                                cvImageDoublon.classList.remove('active');
+                                overlay.classList.remove('active');
+                                isEnlarged = false;
+                            }
+                        }
+                    });
+                });
+            </script>
             <section id ="experience" class="experience"> 
                 <div class="cv-container">
                     <img src="/Images/Sergueï.png" alt="Curriculum Vitae" class="cv-photo" id="cvImage">
+                    <img src="/Images/Sergueï.png" alt="Curriculum Vitae Enlarged" class="cv-photo-doublon" id="cvImageDoublon">
+                    <div class="overlay" id="overlay"></div>
                 </div>
                 <div class="cv-text">
                     <h2> Work Experience</h2>
