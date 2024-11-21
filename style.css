@@ -103,6 +103,33 @@ nav a {
     gap: 20px;
 }
 
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; /* Adjust according to your header height */
+    right: 10px; /* Adjust to position the menu from the right edge */
+    background-color: black; /* Adjust according to your design */
+    width: 60%; /* Adjust the width of the menu */
+    max-width: 250px; /* Set a maximum width for the menu */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    border-radius: 8px; /* Rounded corners for the menu box */
+    padding: 1rem; /* Padding inside the menu box */
+    z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
+    color: white; /* Ensure text color is visible */
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
 .logo {
     color:#b74b4b;
     font-size: 3rem;
@@ -480,25 +507,37 @@ span{
     }
 }
 
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* Adjust the layout on mobile devices */
 @media (max-width: 768px) {
-    nav {
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .logo-container {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0; /* Remove any default margin */
+    }
+
+    .liens-gauche, .liens-droite {
         display: none;
     }
+
     .burger-menu {
         display: block;
     }
-    nav.active {
+    .mobile-menu.active {
         display: block;
-        position: absolute;
-        top: 60px; /* Adjust according to your header height */
-        right: 0;
-        background-color: black; /* Adjust according to your design */
-        width: 100%;
-        text-align: center;
-    }
-    nav.active a {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
     }
 }
