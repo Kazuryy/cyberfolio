@@ -145,7 +145,7 @@ h2 {
     top: -42px; /*Départ des traits frise > boite*/
     left: 50%;
     width: 2px;
-    height: 43px;/*longueur trait frise > boite*/
+    height: 42px;/*longueur trait frise > boite*/
     background-color: #b74b4b;
     transform: translateX(-50%);
 }
@@ -153,7 +153,7 @@ h2 {
     content: ">";
     position: absolute;
     right: -9px;
-    top: -45.006%;
+    top: -45.007%;
     font-size: 2rem;
     color: #b74b4b;
     transform: translateY(-50%);
