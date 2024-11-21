@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="contacts (2).css">
     <title>Contact</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
                     <a class="logo">Sergueï</a>
                 </div>
                 <div class="liens-droite">
-                    <a href=index.html"#about-me-section"> About Me </a>
+                    <a href=index.html#about-me-section> About Me </a>
                     <a href="contacts.html"> Contact</a>
                 </div>
                 <div class="burger-menu">
@@ -27,11 +28,12 @@
             </div>
             <div class="mobile-menu">
                 <a href="index.html"> Home</a>
-                <a href="#"> Projects</a>
+                <a href="projets.html"> Projects</a>
                 <a href="#about-me-section"> About Me </a>
                 <a href="contacts.html"> Contact</a>
             </div>
-        </nav>
+        </nav> 
+
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const burgerMenu = document.querySelector('.burger-menu');
@@ -82,7 +84,7 @@
             <div class="contact-icons">
                 <div class="contact-item">
                     <span class="icon">📧</span>
-                    <span class="info" id="emailInfo">exemple@mail.com</span>
+                    <span class="info" id="emailInfo">sergueï@sergueï.sergueï</span>
                     <button onclick="copyToClipboard('emailInfo')">Copier</button>
                 </div>
                 <div class="contact-item">
@@ -92,36 +94,28 @@
                 </div>
                 <div class="contact-item">
                     <span class="icon">📞</span>
-                    <span class="info" id="phoneInfo">0123456789</span>
+                    <span class="info" id="phoneInfo">1-213-555-0100</span>
                     <button onclick="copyToClipboard('phoneInfo')">Copier</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-    </footer>
-
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            // Clear form fields
+            // clear les champs du formulaire
             document.getElementById("message").value = "";
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
 
-            // Show success message
+            // annonce du bon envoie du message
             const successMessage = document.getElementById("successMessage");
             successMessage.style.display = "block";
         });
 
+            //Fonction de copiage des infos
         function copyToClipboard(infoId) {
             const infoElement = document.getElementById(infoId);
             const text = infoElement.innerText;
@@ -135,6 +129,7 @@
 
             alert(`Copié dans le presse-papier: ${text}`);
         }
+
     </script>
 
 </body>
