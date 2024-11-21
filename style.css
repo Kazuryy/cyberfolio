@@ -42,10 +42,6 @@ header{
     transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
 }
 
-.logo:hover{
-    transform: scale(1.1);/* Agrandit légèrement le logo lorsqu'on passe la souris dessus */
-}
-
 nav a{
     font-size: 1.8rem;/* Taille de police de 1.8rem */
     color: white;/* Couleur du texte blanche */
@@ -56,7 +52,7 @@ nav a{
 }
 
 nav {
-    display: flex;
+    display: fixed;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
@@ -70,16 +66,7 @@ nav {
     cursor: pointer;
 }
 
-.logo{
-    font-size: 3rem;/* Taille de police de 3rem */
-    color: #b74b4b; /* Couleur du texte */
-    font-weight: 800;/* Poids de la police très gras */
-    cursor: default;/* Change le curseur en pointeur (main) */
-    transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
-}
-.logo:hover{
-    transform: scale(1.1);/* Agrandit légèrement le logo lorsqu'on passe la souris dessus */
-}
+
 .nav-content {
     display: flex;
     justify-content: center;
@@ -103,40 +90,6 @@ nav a {
     gap: 20px;
 }
 
-/* Hide the mobile menu by default */
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 60px; /* Adjust according to your header height */
-    right: 10px; /* Adjust to position the menu from the right edge */
-    background-color: black; /* Adjust according to your design */
-    width: 60%; /* Adjust the width of the menu */
-    max-width: 250px; /* Set a maximum width for the menu */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
-    border-radius: 8px; /* Rounded corners for the menu box */
-    padding: 1rem; /* Padding inside the menu box */
-    z-index: 1000; /* Ensure the menu is above other content */
-}
-
-.mobile-menu a {
-    display: block;
-    padding: 1rem;
-    border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
-    color: white; /* Ensure text color is visible */
-}
-
-.mobile-menu a:last-child {
-    border-bottom: none; /* Remove border from the last item */
-}
-
-.logo {
-    color:#b74b4b;
-    font-size: 3rem;
-    font-weight: 800;
-    cursor: default;
-    transition: 0.5s ease;
-}
 
 section{
     min-height: 100vh;/* Hauteur minimale de 100% de la hauteur de la fenêtre */
@@ -241,6 +194,33 @@ span{
     color: #b74b4b;/* Couleur du texte */
 }
 
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; /* Adjust according to your header height */
+    right: 10px; /* Adjust to position the menu from the right edge */
+    background-color: black; /* Adjust according to your design */
+    width: 60%; /* Adjust the width of the menu */
+    max-width: 250px; /* Set a maximum width for the menu */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    border-radius: 8px; /* Rounded corners for the menu box */
+    padding: 1rem; /* Padding inside the menu box */
+    z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
+    color: white; /* Ensure text color is visible */
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
 /* Conteneur de la box */
 .site {
     background-color: #0a0a0a; /* Fond blanc */
@@ -251,32 +231,32 @@ span{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
     text-align: center; /* Texte centré */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
-  }
+}
   
   /* Animation au survol */
-  .site:hover {
+.site:hover {
     transform: translateY(-5px); /* Légère élévation */
     box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
-  }
+}
   
   /* Titre */
-  .site-title {
+.site-title {
     font-size: 1.5rem; /* Taille du texte */
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .site-content {
+.site-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .site-button {
+.site-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -284,11 +264,11 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .site-button:hover {
+.site-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
+}
 
 .appgestion {
     background-color: black;
@@ -314,15 +294,15 @@ span{
   }
   
   /* Contenu */
-  .appgestion-content {
+.appgestion-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .appgestion-button {
+.appgestion-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -330,11 +310,11 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .appgestion-button:hover {
+.appgestion-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
+}
 
 
   .reseausocial {
@@ -358,18 +338,18 @@ span{
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .reseausocial-content {
+.reseausocial-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .reseausocial-button {
+.reseausocial-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -377,13 +357,13 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .reseausocial-button:hover {
+.reseausocial-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
+}
 
-  .dashboard {
+.dashboard {
     background-color: black;
     border: white solid 1px;
     border-radius: 8px;
@@ -404,18 +384,18 @@ span{
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .dashboard-content {
+.dashboard-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .dashboard-button {
+.dashboard-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -423,13 +403,13 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .dashboard-button:hover {
+.dashboard-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
+}
 
-  .jeu {
+.jeu {
     background-color: black;
     border: white solid 1px;
     border-radius: 8px;
@@ -450,18 +430,18 @@ span{
     font-weight: bold;
     color: #333; /* Couleur sombre */
     margin-bottom: 10px;
-  }
+}
   
   /* Contenu */
-  .jeu-content {
+.jeu-content {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6; /* Lisibilité */
-  }
+}
   
   /* Bouton */
-  .jeu-button {
+.jeu-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Couleur principale */
@@ -469,13 +449,13 @@ span{
     text-decoration: none;
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .jeu-button:hover {
+.jeu-button:hover {
     background-color: #0056b3; /* Couleur au survol */
-  }
+}
 
-@media (max-width: 1000px){
+@media (max-width: 400px){
     .home{
         gap: 4rem;
     }
@@ -507,6 +487,7 @@ span{
     }
 }
 
+/* Hide the burger menu button by default */
 .burger-menu {
     display: none;
     cursor: pointer;
