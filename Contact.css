@@ -129,6 +129,41 @@ span{
 }
 
 textarea{
-    margin: 5px solid #b74b4b;
     border-radius: 1%;
+}
+
+
+/*icones*/
+
+.container { 
+    display: flex;
+    margin: 20px;
+} 
+
+.icons { 
+    display: flex;
+    flex-direction: column; 
+    margin-right: 20px; 
+} 
+
+.icon {
+    font-size: 30px; 
+    cursor: pointer; 
+    margin: 10px 0; 
+} 
+
+.info { 
+    display: flex; 
+    flex-direction: column; 
+    transition: transform 0.3s ease; 
+    transform: translateX(100%); 
+} 
+
+.info-item { 
+    display: none; 
+    margin: 5px 0; 
+} 
+
+.info-item.active { 
+    display: block; 
 }
