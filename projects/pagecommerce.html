@@ -7,6 +7,49 @@
     <title>Projet E-commerce</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="nav-content">
+                <div class="liens-gauche">
+                    <a href="index.html"> Home</a>
+                    <a href="projets.html"> Projects</a>
+                </div>
+                <div class="logo">
+                    <a class="logo">Sergueï</a>
+                </div>
+                <div class="liens-droite">
+                    <a href=index.html"#about-me-section"> About Me </a>
+                    <a href="contacts.html"> Contact</a>
+                </div>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="index.html"> Home</a>
+                <a href="#"> Projects</a>
+                <a href="#about-me-section"> About Me </a>
+                <a href="contacts.html"> Contact</a>
+            </div>
+        </nav>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const burgerMenu = document.querySelector('.burger-menu');
+                const mobileMenu = document.querySelector('.mobile-menu');
+        
+                burgerMenu.addEventListener('click', function(event) {
+                    mobileMenu.classList.toggle('active');
+                    event.stopPropagation(); // Empêche le clic de se propager au document
+                });
+        
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+    </header>
     <section class="project-ecommerce">
         <h1 class="project-title">Plateforme de Commerce Électronique Moderne</h1>
         <h1 class="project-d">Ce projet consiste à développer une plateforme de commerce électronique intuitive et performante, offrant une expérience utilisateur fluide et sécurisée. Conçu pour répondre aux besoins des acheteurs et des vendeurs, ce site intègre des fonctionnalités avancées et un design moderne pour maximiser l’engagement et les conversions.</h1>
